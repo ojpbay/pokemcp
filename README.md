@@ -7,5 +7,6 @@ MCP server for retrieving Pokemon data. Inspired by [Building an MCP server in 2
 run with
 
 ```
+.\.venv\Scripts\activate
 mcp dev poke.py
 ```
