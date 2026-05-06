@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Pokemon Card</title>
+</head>
+<body>
+  <div id="app">
+    <div id="loading" class="state-screen">
+      <div class="pokeball-spinner">
+        <div class="pokeball">
+          <div class="pokeball-top"></div>
+          <div class="pokeball-middle"></div>
+          <div class="pokeball-bottom"></div>
+          <div class="pokeball-button"></div>
+        </div>
+      </div>
+      <p>Waiting for a Pokémon…</p>
+    </div>
+    <div id="error" class="state-screen hidden">
+      <div class="error-icon">⚠️</div>
+      <p id="error-message">Something went wrong</p>
+    </div>
+    <div id="card-container" class="hidden">
+      <div id="pokemon-card" class="pokemon-card">
+        <div class="card-inner">
+          <!-- Header -->
+          <div class="card-header">
+            <div class="card-header-left">
+              <span class="pokemon-name" id="pokemon-name">—</span>
+              <span class="pokemon-category" id="pokemon-category"></span>
+            </div>
+            <div class="card-header-right">
+              <span class="hp-label">HP</span>
+              <span class="hp-value" id="pokemon-hp">—</span>
+            </div>
+          </div>
+
+          <!-- Type badges -->
+          <div class="type-row" id="type-row"></div>
+
+          <!-- Artwork -->
+          <div class="artwork-frame">
+            <div class="artwork-inner">
+              <img id="pokemon-image" class="pokemon-image" src="" alt="" />
+              <div class="artwork-shimmer"></div>
+            </div>
+          </div>
+
+          <!-- Number + dimensions -->
+          <div class="meta-row">
+            <span class="pokemon-number" id="pokemon-number">#000</span>
+            <span class="pokemon-dims" id="pokemon-dims"></span>
+          </div>
+
+          <!-- Flavor text -->
+          <p class="flavor-text" id="flavor-text"></p>
+
+          <!-- Stats -->
+          <div class="stats-section">
+            <div class="stats-grid" id="stats-grid"></div>
+          </div>
+
+          <!-- Abilities -->
+          <div class="abilities-section">
+            <span class="abilities-label">Abilities:</span>
+            <span class="abilities-value" id="abilities-value"></span>
+          </div>
+
+          <!-- Card footer decoration -->
+          <div class="card-footer">
+            <div class="footer-dots">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/mcp-app.ts"></script>
+</body>
+</html>
