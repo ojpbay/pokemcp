@@ -10,3 +10,19 @@ run with
 .\.venv\Scripts\activate
 mcp dev poke.py
 ```
+
+## MCP server and app
+
+To install the MCP server with Claude run the following
+
+```
+claude mcp add pokemon-card -- npx tsx g:\Repos\pokemcp\card-app\main.ts --stdio
+```
+
+Then run with
+
+```
+cd card-app
+npm install
+npm start
+```
