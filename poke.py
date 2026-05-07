@@ -1,6 +1,5 @@
 import httpx
 from mcp.server.fastmcp import FastMCP
-from mcp import types
 
 mcp = FastMCP("poke")
 
